@@ -1,0 +1,216 @@
+
+- array has fixed size
+- it is complex to insert/ delete an element from the start of the array or from the middle of the array.
+- we need to write a code to search/sort the array elements, predefined methods are not available.
+
+Collection:
+- it is architecture to store and manipulate the group of objects.
+
+java.util.*;
+
+List :
+ArrayList : 
+- internally uses growable array
+- can contain duplicate elements
+- maintains insertion order
+- non-synchronized
+- default capacity : 10
+- new capacity = (current capacity * 3/2)+1
+			   = 15+1 = 16
+- Once arraylist reaches it's maximum capacity, a bigger arrayList object is going to be created, copy all elements of 1st list into another,
+  and reference will refer to new list
+- it implements Serializable and Cloneable interfaces
+- ArrayList and vector implements RandomAccess interface
+- heterogeneous objects are allowed
+- null insertion is possible
+- best choice for retrieval but not for manipulation because it's slow
+
+Iterator: 
+- it provides the facility of iterating the elements in forward direction only.
+
+Methods:
+1.public boolean hasNext() : it returns if iterator has more elements
+2.public Object next() : it returns the element and moves the cursor pointer to the next element.
+3.public void remove() : removes the last element returned by the iterator. It is rarely used.
+
+for each loop: 
+
+
+1.create a list of employee. add 5 employees and print the employee details using Iterator.
+2.create string list, display elements using for- each loop, insert 2 elements at 1st position, display element at 1st position
+
+
+LinkedList:
+- uses doubly linked list
+- non-synchronized
+- maintains insertion order
+- contains duplicate elements
+- null insertion is possible
+- heterogeneous objects are allowed
+- implements Serializable and Cloneable interface
+- best choice for manipulation but retrieval is slow
+
+ListIterator:
+- used to traverse the elements in forward and backward direction.
+	Method:
+	hasNext(),next(),hasPrevious(),previous()
+
+Sorting List:
+- we can not sort the elements of List but Collections class provides methods for sorting the elements of List type.
+- you can sort list elements only if it is Comparable or Comparator
+- String class and Wrapper classes implements the Comparable interface, so if you store the object of String or wrapper classes, it will be Comparable
+- if you want to sort user-defined objects, you need to implement Comparable or Comparator interface
+
+Comparable:
+- single sorting order
+- java.lang package
+- contains abstract method, compareTo(Object o)
+- Collections.sort(List);
+
+Comparator:
+- multiple sorting order
+- java.util.* package
+- contains abstract method, compare(Object o1, Object o2)
+- Collections.sort(List,Comparator);
+
+
+Vector :
+- legacy class(present from 1st version,1.1)
+- uses growable array
+- synchronized
+- duplicate elements are allowed
+- insertion order
+- null insertion is possible
+- heterogeneous objects are allowed
+- implements Serializable, Cloneable and RandomAccess Interface
+- default capacity is 10
+- new capacity = current capacity*2
+- best choice for retrieval
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Read the question carefully and follow the input and output format.
+
+Given the basic salary as input, write a program to calculate the bonus and display it.
+
+The bonus will be calculated based on the below category.
+Basic>20000 bonus=17%of basic+1500
+Basic>15000 bonus=15%of basic+1200
+Basic>10000 bonus=12%of basic+1000
+for rest =8%of basic+500
+
+Input and Output Format :
+
+First line of input consists of n, the basic salary.
+Output is a single integer that displays the bonus.
+
+Print "Number too large" when the given input numbers is greater than 32767 .
+Print "Number too small" when the given input is a negative number.
+
+Include a function named calculateBonus(int basic) whose return type is an integer, the bonus.
+
+Sample Input 1:
+21000
+
+Sample Output 1:
+5070
+
+Sample Input 2:
+327678
+Sample Output 2:
+Number too large
+
+Q.
+Read the question carefully and follow the input and output format.
+
+Write a program to generate new number from the given input based on following conditions.
+
+(i) Even digit should be replaced by next Even digit.
+(ii) Odd digit should be replaced with next Odd digit
+
+Input and Output Format :
+Input consists of an integer. Output is also an integer.
+
+1) Print "Number too small" when any of given input numbers is a negative number.
+2) Print "Number too large" when any of given input numbers is greater than 32767.
+
+
+Sample Input 1:
+123
+
+Sample Output 1:
+345
+
+Sample Input 2:
+32768
+
+Sample Output 2:
+Number too large
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
